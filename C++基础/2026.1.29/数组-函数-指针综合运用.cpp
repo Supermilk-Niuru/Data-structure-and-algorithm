@@ -13,9 +13,9 @@ int main()
 void bubblesort(int *arr,int len)
 {
     int i,j;
-    bool flag = false;
     for(i=0;i<len;i++)
     {
+        bool flag = false;
         for(j=0;j<len-i-1;j++)
         {
             if(arr[j]>arr[j+1])
