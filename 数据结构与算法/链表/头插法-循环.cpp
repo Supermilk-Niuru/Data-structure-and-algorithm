@@ -10,9 +10,11 @@ int main()
     int i;
     int n;
     cin>>n;
-    Listnode *head = new Listnode;
-    head->data = -1;
-    head->next = NULL;
+    //Listnode *head = new Listnode;
+    Listnode *head;
+    //head->data = -1;
+    //head->next = NULL;
+    head = NULL;//没有必要为头指针申请内存 它仅仅是一个搭桥的。
     for(i=0;i<n;i++)
     {
         Listnode *m = new Listnode;
