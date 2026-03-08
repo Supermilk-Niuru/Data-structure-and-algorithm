@@ -8,3 +8,14 @@
 容器中存的是数，但是迭代器通过地址来帮助我们查找那些数，这也就是为什么最后打印数据的时候需要使用解引用`*`运算符。
 $$\text{迭代器} = \text{指针的逻辑} + \text{更强的适应性}$$
 由于`vector`容器中一般内存连续，所以迭代器一般是原生指针。
+**注意**
+```C++
+vector<int>::iterator Begin = m.begin();
+vector<int>::iterator End = m.end();
+for(Begin;Begin!=End;Begin++)
+{
+    cout<<*Begin<<" ";
+}
+```
+运行此代码，会出现`warning`,因为在编译器看来这个`for`循环中，`Begin`啥也没做，无实际意义。
+所以要么使用`while`循环，要么在循环内部定义迭代器
